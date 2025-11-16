@@ -201,7 +201,9 @@ body {
     transition: 0.3s;
     border-radius: var(--radius-full);
 }
-
+.page-hero{
+    margin-top: 80px;
+}
 .hero {
     min-height: 100vh;
     background: var(--gradient-hero);
@@ -4058,7 +4060,7 @@ body {
         width: auto !important;
     }
 }
-/* ===== QUICK FIX FOR LOGO & CONTACT ===== */
+
 @media (max-width: 768px) {
     /* Logo center */
     .nav-logo {
@@ -4396,7 +4398,7 @@ body {
     
     .contact-method:nth-child(1) .method-link:hover {
         background: #DD2C00 !important;
-        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4) !important;
+        box-shadow: 0 4px 12px #e3390f !important;
     }
     .contact-method:nth-child(2) .method-link {
         background: #DD2C00 !important;
@@ -4404,7 +4406,7 @@ body {
     
     .contact-method:nth-child(2) .method-link:hover {
         background: #DD2C00 !important;
-        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4) !important;
+        box-shadow: 0 4px 12px #e3390f !important;
     }
     .contact-method:nth-child(3) .method-text {
         background: rgba(255, 61, 0, 0.2) !important;
