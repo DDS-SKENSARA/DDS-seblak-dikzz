@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Kontak - Seblak Dikzz</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="competition-style.css">
+    <link rel="stylesheet" href="responsive-fixes.css">
+    
+    <!-- Mobile Optimizations -->
+    <meta name="theme-color" content="#FF3D00">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- RESPONSIVE FIXES -->
+    <style>
+        /* ===== RESPONSIVE FIXES FOR CONTACT PAGE ===== */
+        /* Hanya memperbaiki responsiveness, tidak mengubah tema/warna */
+
+        /* 1. FIX HORIZONTAL SCROLLING GLOBAL */
+        html, body {
+            max-width: 100% !important;
+            overflow-x: hidden !important;
+            position: relative !important;
+        }
+
+        * {
+            box-sizing: border-box !important;
+        }
+
+        /* 2. FIX NAVBAR SPACING */
+        .navbar {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+            
+            .navbar-brand {
+                margin-left: 0 !important;
+                font-size: 1.1rem !important;
+            }
+            
+            .navbar-toggler {
+                margin-right: 0 !important;
+                padding: 4px 8px !important;
+            }
+            
+            .navbar-nav {
+                padding: 10px 0 !important;
+                text-align: center !important;
+            }
+            
+            .nav-item {
+                margin: 5px 0 !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+        }
+
+        /* 3. FIX CONTACT FORM RESPONSIVE */
+        .contact-form {
+            max-width: 100% !important;
+            width: 100% !important;
+            padding: 0 15px !important;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        .form-container {
+            width: 100% !important;
+            max-width: 500px !important;
+            margin: 0 auto !important;
+            padding: 0 15px !important;
+        }
+
+        @media (max-width: 576px) {
+            .contact-form {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+            
+            .form-container {
+                padding: 0 10px !important;
+            }
+            
+            .form-control {
+                font-size: 14px !important;
+                padding: 8px 12px !important;
+            }
+        }
+
+        /* 4. FIX CONTACT GRID LAYOUT */
+        .contact-grid {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 2rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+            }
+            
+            .contact-methods,
+            .contact-form-container {
+                width: 100% !important;
+            }
+        }
+
+        /* 5. FIX FORM ROW LAYOUT */
+        .form-row {
+            display: flex !important;
+            gap: 1rem !important;
+            flex-wrap: wrap !important;
+        }
+
+        @media (max-width: 576px) {
+            .form-row {
+                flex-direction: column !important;
+                gap: 0 !important;
+            }
+            
+            .form-row .form-group {
+                width: 100% !important;
+                margin-bottom: 1rem !important;
+            }
+        }
+
+        /* 6. FIX QUICK ORDER GRID */
+        .quick-order-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 1.5rem !important;
+        }
+
+        @media (max-width: 576px) {
+            .quick-order-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+        }
+
+        /* 7. FIX LOCATION GRID */
+        .location-grid {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 2rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .location-grid {
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+            }
+            
+            .location-info,
+            .location-map {
+                width: 100% !important;
+            }
+        }
+
+        /* 8. FIX FAQ GRID */
+        .faq-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 1rem !important;
+        }
+
+        /* 9. FIX CTA BUTTONS */
+        .cta-actions {
+            display: flex !important;
+            gap: 1rem !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+        }
+
+        @media (max-width: 576px) {
+            .cta-actions {
+                flex-direction: column !important;
+                width: 100% !important;
+            }
+            
+            .cta-actions .btn {
+                width: 100% !important;
+                margin: 5px 0 !important;
+            }
+        }
+
+        /* 10. FIX FOOTER LAYOUT */
+        .footer-content {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 2rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+            }
+            
+            .footer-section {
+                width: 100% !important;
+            }
+        }
+
+        /* 11. FIX GENERAL CONTAINERS */
+        .container,
+        .container-fluid {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        @media (max-width: 576px) {
+            .container,
+            .container-fluid {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+        }
+
+        /* 12. FIX IMAGES RESPONSIVE */
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+
+        /* 13. FIX BUTTONS MOBILE */
+        @media (max-width: 576px) {
+            .btn {
+                width: 100% !important;
+                margin: 5px 0 !important;
+                display: block !important;
+            }
+            
+            .btn-group .btn {
+                width: auto !important;
+                display: inline-block !important;
+            }
+        }
+
+        /* 14. FIX FONT SIZES MOBILE */
+        @media (max-width: 576px) {
+            body {
+                font-size: 14px !important;
+            }
+            
+            h1 {
+                font-size: 1.8rem !important;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            h3 {
+                font-size: 1.3rem !important;
+            }
+        }
+
+        /* 15. FIX MAP IFRAME */
+        .map-container iframe {
+            width: 100% !important;
+            height: 300px !important;
+        }
+
+        @media (max-width: 576px) {
+            .map-container iframe {
+                height: 250px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" data-aos="fade-down">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <div class="logo-fire"></div>
+                    <div class="logo-bowl"></div>
+                </div>
+                <span class="logo-text">SEBLAK<span class="logo-accent">DIKZZ</span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">
+                        <i class="fas fa-utensils"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-store"></i>
+                        <span>Tentang</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">
+                        <i class="fas fa-phone"></i>
+                        <span>Kontak</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-cta">
+                <button class="cta-btn" onclick="quickOrder()">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Pesan Sekarang</span>
+                </button>
+            </div>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="hero-background">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-title" data-aos="fade-up">
+                    Pesan <span class="title-accent">Seblak Sekarang</span>
+                </h1>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                    Isi form pemesanan dan kami akan segera memproses pesanan Anda
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-methods" data-aos="fade-right">
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="method-content">
+                            <h3>WhatsApp Order</h3>
+                            <p>Pesan cepat via WhatsApp untuk respon instan</p>
+                            <a href="https://wa.me/6285185084941" class="method-link">
+                                +62 851-8508-4941
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="method-content">
+                            <h3>Telepon Langsung</h3>
+                            <p>Hubungi kami untuk konsultasi menu</p>
+                            <a href="tel:+6285185084941" class="method-link">
+                                +62 851-8508-4941
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="method-content">
+                            <h3>Kunjungi Outlet</h3>
+                            <p>Nikmati seblak langsung di tempat kami</p>
+                            <span class="method-text">Jl. Kuliner No. 123, Jakarta Selatan</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="method-content">
+                            <h3>Jam Operasional</h3>
+                            <p>Kami siap melayani Anda setiap hari</p>
+                            <span class="method-text">Senin-Minggu: 08:00 - 23:00 WIB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Form - Mobile Optimized -->
+                <div class="contact-form-container" data-aos="fade-left">
+                    <div class="form-header">
+                        <h2>Form Pemesanan</h2>
+                        <p>Isi data berikut untuk memesan seblak favorit Anda</p>
+                    </div>
+                    
+                    <form class="contact-form" id="orderForm">
+                        <div class="form-group">
+                            <label for="customerName">Nama Lengkap *</label>
+                            <input type="text" id="customerName" name="customerName" required 
+                                   placeholder="Masukkan nama lengkap Anda"
+                                   aria-required="true">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customerPhone">Nomor WhatsApp *</label>
+                                <input type="tel" id="customerPhone" name="customerPhone" required 
+                                       placeholder="+62 812-3456-7890"
+                                       aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="customerAddress">Alamat Pengiriman *</label>
+                                <input type="text" id="customerAddress" name="customerAddress" required 
+                                       placeholder="Alamat lengkap pengiriman"
+                                       aria-required="true">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="seblakType">Jenis Seblak *</label>
+                            <select id="seblakType" name="seblakType" required aria-required="true">
+                                <option value="">Pilih jenis seblak</option>
+                                <option value="Seblak Original">Seblak Original - Rp 18.000</option>
+                                <option value="Seblak Komplit">Seblak Komplit - Rp 25.000</option>
+                                <option value="Seblak Mie">Seblak Mie - Rp 20.000</option>
+                                <option value="Seblak Ceker">Seblak Ceker - Rp 22.000</option>
+                                <option value="Seblak Cheese">Seblak Cheese - Rp 28.000</option>
+                                <option value="Seblak Super Pedas">Seblak Super Pedas - Rp 30.000</option>
+                                <option value="Krupuk Seblak">Krupuk Seblak - Rp 12.000</option>
+                                <option value="Seblak Kering Komplit">Seblak Kering Komplit - Rp 18.000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="spicyLevel">Level Pedas *</label>
+                                <select id="spicyLevel" name="spicyLevel" required aria-required="true">
+                                    <option value="">Pilih level pedas</option>
+                                    <option value="Level 1 - Mild">Level 1 - Mild (Tidak Pedas)</option>
+                                    <option value="Level 2 - Medium">Level 2 - Medium (Sedang)</option>
+                                    <option value="Level 3 - Hot">Level 3 - Hot (Pedes)</option>
+                                    <option value="Level 4 - Extra Hot">Level 4 - Extra Hot (Sangat Pedas)</option>
+                                    <option value="Level 5 - Insane">Level 5 - Insane (Extreme Pedas)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity">Jumlah Porsi *</label>
+                                <input type="number" id="quantity" name="quantity" min="1" max="10" 
+                                       value="1" required aria-required="true">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additionalNotes">Catatan Tambahan</label>
+                            <textarea id="additionalNotes" name="additionalNotes" rows="3" 
+                                      placeholder="Contoh: Kurangi garam, tambah kerupuk, tanpa kol, dll..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentMethod">Metode Pembayaran *</label>
+                            <select id="paymentMethod" name="paymentMethod" required aria-required="true">
+                                <option value="">Pilih metode pembayaran</option>
+                                <option value="Transfer Bank">Transfer Bank (BCA/Mandiri/BNI)</option>
+                                <option value="E-Wallet">E-Wallet (Gopay/OVO/Dana)</option>
+                                <option value="Cash on Delivery">Cash on Delivery (COD)</option>
+                                <option value="QRIS">QRIS</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fab fa-whatsapp"></i>
+                            Kirim Pesanan via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="quick-order-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Pesan Cepat</h2>
+                <p class="section-subtitle">Pilih menu favorit dan pesan langsung via WhatsApp</p>
+            </div>
+            
+            <div class="quick-order-grid">
+                <div class="quick-order-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="quick-order-image">
+                        <img src="sblk kmplit.jpg" alt="Seblak Komplit" loading="lazy">
+                    </div>
+                    <div class="quick-order-content">
+                        <h3>Seblak Komplit</h3>
+                        <p class="price">Rp 25.000</p>
+                        <button class="btn-order-small" onclick="quickOrderItem('Seblak Komplit', 'Rp 25.000')">
+                            <i class="fab fa-whatsapp"></i>
+                            Pesan Cepat
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quick-order-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="quick-order-image">
+                        <img src="sblk mie.jpg" alt="Seblak Mie" loading="lazy">
+                    </div>
+                    <div class="quick-order-content">
+                        <h3>Seblak Mie</h3>
+                        <p class="price">Rp 20.000</p>
+                        <button class="btn-order-small" onclick="quickOrderItem('Seblak Mie', 'Rp 20.000')">
+                            <i class="fab fa-whatsapp"></i>
+                            Pesan Cepat
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quick-order-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="quick-order-image">
+                        <img src="sblk chese.jpeg" alt="Seblak Cheese" loading="lazy">
+                    </div>
+                    <div class="quick-order-content">
+                        <h3>Seblak Cheese</h3>
+                        <p class="price">Rp 28.000</p>
+                        <button class="btn-order-small" onclick="quickOrderItem('Seblak Cheese', 'Rp 28.000')">
+                            <i class="fab fa-whatsapp"></i>
+                            Pesan Cepat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-section">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-info" data-aos="fade-right">
+                    <h2>Informasi Pengiriman</h2>
+                    
+                    <div class="info-card">
+                        <h3>Area Pengiriman</h3>
+                        <div class="delivery-areas">
+                            <div class="area-item">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>Jakarta Selatan (Gratis Ongkir)</span>
+                            </div>
+                            <div class="area-item">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>Jakarta Pusat (Rp 5.000)</span>
+                            </div>
+                            <div class="area-item">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>Jakarta Barat (Rp 7.000)</span>
+                            </div>
+                            <div class="area-item">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>Jakarta Timur (Rp 8.000)</span>
+                            </div>
+                            <div class="area-item">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>Jakarta Utara (Rp 10.000)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Estimasi Pengiriman</h3>
+                        <div class="delivery-time">
+                            <div class="time-item">
+                                <i class="fas fa-motorcycle" aria-hidden="true"></i>
+                                <div>
+                                    <strong>30-45 Menit</strong>
+                                    <span>Pesanan diproses cepat</span>
+                                </div>
+                            </div>
+                            <div class="time-item">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Jam Sibuk</strong>
+                                    <span>Bisa sampai 60 menit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Metode Pembayaran</h3>
+                        <div class="payment-methods">
+                            <div class="payment-item">
+                                <i class="fas fa-university" aria-hidden="true"></i>
+                                <span>Transfer Bank</span>
+                            </div>
+                            <div class="payment-item">
+                                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                                <span>E-Wallet</span>
+                            </div>
+                            <div class="payment-item">
+                                <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
+                                <span>Cash (COD)</span>
+                            </div>
+                            <div class="payment-item">
+                                <i class="fas fa-qrcode" aria-hidden="true"></i>
+                                <span>QRIS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-map" data-aos="fade-left">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956135063986!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sJakarta%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1628589161220!5m2!1sid!2sid" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0; border-radius: var(--radius-lg);" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Lokasi Seblak Dikzz di Jakarta">
+                        </iframe>
+                    </div>
+                    
+                    <div class="location-details">
+                        <h3>Seblak Dikzz Main Store</h3>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <span>Jl. Kuliner No. 123, Kebayoran Baru, Jakarta Selatan 12540</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <span>Buka Setiap Hari: 08:00 - 23:00 WIB</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <span>+62 851-8508-4941</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Pertanyaan Seputar Pemesanan</h2>
+                <p class="section-subtitle">Informasi penting untuk pengalaman pemesanan yang lancar</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h3>Bagaimana cara mengetahui total biaya pesanan?</h3>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Setelah Anda mengisi form pemesanan, kami akan mengirimkan detail total biaya melalui WhatsApp yang meliputi: harga menu, ongkos kirim (jika ada), dan metode pembayaran yang dipilih.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h3>Apakah bisa pesan untuk jam tertentu?</h3>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya! Anda bisa request pengiriman untuk jam tertentu. Cantumkan dalam catatan tambahan, contoh: "Tolong antar jam 18:30". Kami akan berusaha memenuhi request waktu pengantaran.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h3>Bagaimana jika ada menu yang habis?</h3>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami akan segera menghubungi Anda via WhatsApp jika menu yang dipesan sedang habis dan menawarkan alternatif menu lainnya yang tersedia.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h3>Apakah ada minimum order untuk delivery?</h3>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tidak ada minimum order! Anda bisa pesan 1 porsi seblak saja. Untuk area tertentu mungkin ada tambahan ongkir minimum, info lengkap akan diberikan saat konfirmasi pesanan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Masih Ada Pertanyaan?</h2>
+                <p>Tim customer service kami siap membantu Anda 7 hari seminggu</p>
+                <div class="cta-actions">
+                    <button class="btn btn-primary btn-large" onclick="quickOrder()">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat Langsung
+                    </button>
+                    <a href="tel:+6285185084941" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i>
+                        Telepon Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <div class="logo-fire"></div>
+                            <div class="logo-bowl"></div>
+                        </div>
+                        <span class="logo-text">SEBLAK<span class="logo-accent">DIKZZ</span></span>
+                    </div>
+                    <p class="footer-description">
+                        Menghadirkan pengalaman kuliner seblak terbaik dengan inovasi rasa 
+                        dan kualitas premium.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/reel/DNnXaunvKZG/?utm_source=ig_web_copy_link" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@andikakhairulanwar?is_from_webapp=1&sender_device=pc" class="social-link" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/6285185084941" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Kuliner No. 123, Jakarta</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+62 851-8508-4941</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>seblakdikzz@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Jam Operasional</h3>
+                    <div class="opening-hours">
+                        <div class="time-item">
+                            <span>Senin - Minggu</span>
+                            <span>08:00 - 23:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Seblak Dikzz. All rights reserved. | Designed with ❤️ for culinary innovation</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+    <script src="competition-animations.js"></script>
+</body>
+</html>

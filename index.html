@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seblak Dikzz - Revolusi Rasa Pedas Autentik</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="competition-style.css">
+    <link rel="stylesheet" href="responsive-fixes.css">
+</head>
+<body>
+    <nav class="navbar" data-aos="fade-down">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <div class="logo-fire"></div>
+                    <div class="logo-bowl"></div>
+                </div>
+                <span class="logo-text">SEBLAK<span class="logo-accent">DIKZZ</span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">
+                        <i class="fas fa-utensils"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-store"></i>
+                        <span>Tentang</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <i class="fas fa-phone"></i>
+                        <span>Kontak</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Ganti bagian nav-cta di dalam navbar -->
+<div class="nav-cta">
+    <!-- Tombol ini akan disembunyikan oleh JavaScript dan diganti dengan floating button -->
+    <button class="cta-btn" onclick="quickOrder()">
+        <i class="fab fa-whatsapp"></i>
+        <span>Pesan Sekarang</span>
+    </button>
+</div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-background">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+            <div class="floating-element element-4"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-down">
+                    <span> Pedasnya Bikin Nagih!</span>
+                </div>
+                
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                    <span class="title-main">Revolusi Rasa</span>
+                    <span class="title-accent">Seblak Autentik</span>
+                </h1>
+                
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+                    Rasakan ledakan rasa pedas yang menggugah selera dengan racikan bumbu premium 
+                    dan bahan-bahan pilihan terbaik. Setiap suapan adalah petualangan rasa yang tak terlupakan.
+                </p>
+
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                    <div class="stat-item">
+                        <div class="stat-number">4000+</div>
+                        <div class="stat-label">Pelanggan Puas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Varian Rasa</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                </div>
+
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="800">
+                    <button class="btn btn-primary" onclick="quickOrder()">
+                        <i class="fab fa-whatsapp"></i>
+                        Pesan Via WhatsApp
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToMenu()">
+                        <i class="fas fa-utensils"></i>
+                        Jelajahi Menu
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                <div class="food-card">
+                    <div class="card-image">
+                        <img src="sblk ori.jpg" alt="Seblak Special">
+                        <div class="card-badge">Chef's Special</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Seblak Original</h3>
+                        <p>Rasa autentik dengan level pedas customizable</p>
+                        <div class="card-price">Rp 18.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Mengapa Pilih Seblak Dikzz?</h2>
+                <p class="section-subtitle">Keunggulan yang membuat kami berbeda</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
+                    <h3>Level Pedas Custom</h3>
+                    <p>Atur level kepedasan sesuai selera Anda, dari mild hingga extra hot</p>
+                    <div class="feature-tag">Personalized</div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Bahan Premium</h3>
+                    <p>Menggunakan bahan-bahan segar pilihan dengan kualitas terbaik</p>
+                    <div class="feature-tag">Fresh</div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Proses Cepat</h3>
+                    <p>Pesanan siap dalam 15 menit tanpa mengorbankan kualitas rasa</p>
+                    <div class="feature-tag">Fast</div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Rasa Autentik</h3>
+                    <p>Resep turun-temurun dengan sentuhan modern yang inovatif</p>
+                    <div class="feature-tag">Authentic</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="menu-preview" id="menu">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Menu Signature Kami</h2>
+                <p class="section-subtitle">Kreasi terbaik yang wajib dicoba</p>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-image">
+                        <img src="sblk ori.jpg" alt="Seblak Original">
+                        <div class="menu-overlay">
+                            <button class="order-btn" onclick="orderWhatsApp('Seblak Original', 'Rp 18.000')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Seblak Original</h3>
+                        <p>Perpaduan kerupuk dan bumbu pedas autentik</p>
+                        <div class="menu-meta">
+                            <span class="price">Rp 18.000</span>
+                            <span class="spicy-level">
+                                <i class="fas fa-pepper-hot"></i>
+                                Level 2-5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-image">
+                        <img src="sblk kmplit.jpg" alt="Seblak Komplit">
+                        <div class="menu-overlay">
+                            <button class="order-btn" onclick="orderWhatsApp('Seblak Komplit', 'Rp 25.000')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Seblak Komplit</h3>
+                        <p>Extra topping: sosis, bakso, telur, dan sayuran segar</p>
+                        <div class="menu-meta">
+                            <span class="price">Rp 25.000</span>
+                            <span class="spicy-level">
+                                <i class="fas fa-pepper-hot"></i>
+                                Level 1-5
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="menu-image">
+                        <img src="sblk mie.jpg" alt="Seblak Mie">
+                        <div class="menu-overlay">
+                            <button class="order-btn" onclick="orderWhatsApp('Seblak Mie', 'Rp 20.000')">
+                                <i class="fab fa-whatsapp"></i>
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>Seblak Mie</h3>
+                        <p>Mie kuning spesial dengan kuah pedas gurih</p>
+                        <div class="menu-meta">
+                            <span class="price">Rp 20.000</span>
+                            <span class="spicy-level">
+                                <i class="fas fa-pepper-hot"></i>
+                                Level 2-4
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta" data-aos="fade-up">
+                <a href="menu.html" class="btn btn-outline">
+                    Lihat Semua Menu
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Siap Merasakan Ledakan Rasa?</h2>
+                <p>Pesan sekarang dan dapatkan pengalaman kuliner yang tak terlupakan</p>
+                <div class="cta-actions">
+                    <button class="btn btn-primary btn-large" onclick="quickOrder()">
+                        <i class="fab fa-whatsapp"></i>
+                        Pesan Via WhatsApp
+                    </button>
+                    <a href="tel:+6281234567890" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i>
+                        Telepon Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <div class="logo-fire"></div>
+                            <div class="logo-bowl"></div>
+                        </div>
+                        <span class="logo-text">SEBLAK<span class="logo-accent">DIKZZ</span></span>
+                    </div>
+                    <p class="footer-description">
+                        Menghadirkan pengalaman kuliner seblak terbaik dengan inovasi rasa 
+                        dan kualitas premium.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/reel/DNnXaunvKZG/?utm_source=ig_web_copy_link" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@andikakhairulanwar?is_from_webapp=1&sender_device=pc" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/message/Z7XNBUWPS4CPD1" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Kuliner No. 123, Jakarta</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+62 851-8508-4941</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>seblakdikzz@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Jam Operasional</h3>
+                    <div class="opening-hours">
+                        <div class="time-item">
+                            <span>Senin - Jumat</span>
+                            <span>09:00 - 22:00</span>
+                        </div>
+                        <div class="time-item">
+                            <span>Sabtu - Minggu</span>
+                            <span>08:00 - 23:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Seblak Dikzz. All rights reserved. | Designed with for culinary innovation</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="competition-animations.js"></script>
+</body>
+</html>
